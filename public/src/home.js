@@ -26,9 +26,11 @@ function getMostCommonGenres(books) {
       if (!acc.includes(book.genre)) acc.push(book.genre)
       return acc
     }, []) //a list of each genre
+    console.log(genresList)
 
 let result = genresList.map(genre => getGenreAndCount(genre))
-  result.sort((genreA,genreB) => genreA.count < genreB.count ? 1:-1)
+result.sort((genreA,genreB) => genreA.count < genreB.count ? 1:-1)
+console.log(result)
   result.length = 5
 return result 
 }
